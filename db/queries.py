@@ -4,7 +4,7 @@ tasks_table = """
      CREATE TABLE IF NOT EXISTS tasks (
          id INTEGER PRIMARY KEY AUTOINCREMENT,
          task TEXT NOT NULL
-         completed INTEGER DEFALUT 0
+         completed INTEGER DEFAULT 0
      )
 """
 

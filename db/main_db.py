@@ -31,7 +31,7 @@ def update_task(task_id,new_task):
     conn.close()
    
 
-def dalete_task(task_id):
+def delete_task(task_id):
     conn = sqlite3.connect(path_db)
     cursor = conn.cursor()
     cursor.execute(queries.dalete_task, (task_id, ))
@@ -47,7 +47,7 @@ def get_tasks(filter_type):
     elif filter_type == 'completed':
         cursor.execute(queries.select_task_completed)
     elif filter_type == 'uncompleted':
-        cursor.exrcute(queries.select_task_uncompleted)
+        cursor.execute(queries.select_task_uncompleted)
         
     task = cursor.fetchall()
     conn.close()
